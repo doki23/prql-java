@@ -4,7 +4,7 @@ on:
     types: [ opened, reopened, synchronize, labeled ]
   push:
     branches:
-      - main
+      - *
 jobs:
   ubuntu-test:
     runs-on: ubuntu-latest
