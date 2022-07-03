@@ -1,8 +1,8 @@
 name: prql-java-test
 on:
+  "push"
   pull_request:
     types: [ opened, reopened, synchronize, labeled ]
-  push
 jobs:
   ubuntu-test:
     runs-on: ubuntu-latest
