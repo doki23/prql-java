@@ -1,6 +1,6 @@
 name: prql-java-test
 on:
-  "push"
+  push:
   pull_request:
     types: [ opened, reopened, synchronize, labeled ]
 jobs:
