@@ -2,9 +2,7 @@ name: prql-java-test
 on:
   pull_request:
     types: [ opened, reopened, synchronize, labeled ]
-  push:
-    branches:
-      - *
+  push
 jobs:
   ubuntu-test:
     runs-on: ubuntu-latest
