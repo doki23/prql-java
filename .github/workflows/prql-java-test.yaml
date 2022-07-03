@@ -17,6 +17,10 @@ jobs:
           toolchain: stable
           override: true
           default: true
+      - name: Setup Docker
+        run: sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+      - name: Setup cross
+        run: cargo install -f cross
       - name: Maven test
         run: cd ./java-api && ./mvnw test
 #  macos-test:
