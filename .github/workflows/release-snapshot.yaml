@@ -1,7 +1,6 @@
-name: release
+name: release-snapshot
 on:
-  release:
-    type: [published]
+  push:
 
 jobs:
   publish-to-maven:
@@ -21,3 +20,4 @@ jobs:
           nexus_username: ${{ secrets.nexus_username }}
           nexus_password: ${{ secrets.nexus_password }}
           directory: java/
+          maven_profiles: deploy-snapshot
