@@ -1,5 +1,12 @@
 #!/bin/bash
 
+PROJECT_DIR=$1
+echo PROJECT_DIR="${PROJECT_DIR}"
+pwd
+CONTEXT_PATH=$?
+echo CONTEXT_PATH="${CONTEXT_PATH}"
+cd "${PROJECT_DIR}" || exit 1
+
 # install cross
 cargo install cross
 
@@ -51,3 +58,5 @@ cp -f target/x86_64-unknown-linux-gnu/release/libprql4j.so java/src/main/resourc
 #cross build --release --target aarch64-apple-darwin
 #ls -la target/x86_64-apple-darwin/release
 #cp -f target/x86_64-apple-darwin/release/libprql4j.dylib java/src/main/resources/libprql4j-osx-arm64.dylib
+
+cd "${CONTEXT_PATH}" || exit 1
