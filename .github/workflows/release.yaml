@@ -14,8 +14,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 8
-      - name: Cross compilation
-        run: bash cross.sh
       - name: Release Maven package
         uses: samuelmeuli/action-maven-publish@v1
         with:
