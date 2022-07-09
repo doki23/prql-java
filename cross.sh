@@ -2,8 +2,7 @@
 
 PROJECT_DIR=$1
 echo PROJECT_DIR="${PROJECT_DIR}"
-pwd
-CONTEXT_PATH=$?
+CONTEXT_PATH=$(pwd)
 echo CONTEXT_PATH="${CONTEXT_PATH}"
 cd "${PROJECT_DIR}" || exit 1
 
