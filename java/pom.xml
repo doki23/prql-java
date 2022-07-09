@@ -22,7 +22,7 @@
 
     <groupId>io.github.doki23</groupId>
     <artifactId>prql-java</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>prql compiler api for java</description>
@@ -70,7 +70,7 @@
                 <version>1.6.0</version>
                 <executions>
                     <execution>
-                        <id>Rust build for test</id>
+                        <id>Build for local</id>
                         <phase>generate-resources</phase>
                         <goals>
                             <goal>exec</goal>
@@ -80,16 +80,6 @@
                             <arguments>
                                 <argument>${project.basedir}</argument>
                             </arguments>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>Rust build for release</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>../cross.sh</executable>
                         </configuration>
                     </execution>
                 </executions>
