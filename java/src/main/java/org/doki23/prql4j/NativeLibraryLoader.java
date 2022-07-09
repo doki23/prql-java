@@ -125,9 +125,4 @@ public class NativeLibraryLoader {
 
     private NativeLibraryLoader() {
     }
-
-    public static void main(String[] args) {
-        NativeLibraryLoader loader = NativeLibraryLoader.getInstance();
-        System.out.println(loader);
-    }
 }

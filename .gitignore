@@ -26,4 +26,4 @@ Cargo.lock
 
 target
 
-java/src/main/resources/libprql4j*
+**/libprql4j*
