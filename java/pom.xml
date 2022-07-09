@@ -22,7 +22,7 @@
 
     <groupId>io.github.doki23</groupId>
     <artifactId>prql-java</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>prql compiler api for java</description>
