@@ -47,14 +47,14 @@ cp -f target/x86_64-apple-darwin/release/libprql4j.dylib java/src/main/resources
 # x86_64-unknown-linux-musl
 echo "compiling for x86_64-unknown-linux-musl"
 rustup target add x86_64-unknown-linux-musl
-cross rustc -- --crate-type=dylib --release --target x86_64-unknown-linux-musl
+cross rustc --release --target x86_64-unknown-linux-musl -- --crate-type=dylib
 ls -la target/x86_64-unknown-linux-musl/release
 cp target/x86_64-unknown-linux-musl/release/libprql4j.so java/src/main/resources/libprql4j-linux64-musl.so
 
 # aarch64-unknown-linux-musl
 echo "compiling for aarch64-unknown-linux-musl"
 rustup target add aarch64-unknown-linux-musl
-cross rustc -- --crate-type=dylib --release --target aarch64-unknown-linux-musl
+cross rustc --release --target aarch64-unknown-linux-musl -- --crate-type=dylib
 ls -la target/aarch64-unknown-linux-musl/release
 cp -f target/aarch64-unknown-linux-musl/release/libprql4j.so java/src/main/resources/libprql4j-linux-aarch64-musl.so
 
