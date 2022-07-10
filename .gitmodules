@@ -1,0 +1,3 @@
+[submodule "cross-toolchains"]
+	path = cross-toolchains
+	url = https://github.com/cross-rs/cross-toolchains.git
