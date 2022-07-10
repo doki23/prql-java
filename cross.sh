@@ -8,6 +8,9 @@ cd "${PROJECT_DIR}" || exit 1
 
 # install cross
 cargo install cross
+cargo install cargo-crate-type
+
+cargo crate-type cdylib
 
 # x86_64-unknown-linux-gnu
 echo "compiling for x86_64-unknown-linux-gnu"
@@ -44,7 +47,6 @@ cross build --release --target aarch64-apple-darwin
 ls -la target/x86_64-apple-darwin/release
 cp -f target/x86_64-apple-darwin/release/libprql4j.dylib java/src/main/resources/libprql4j-osx-arm64.dylib
 
-cargo install cargo-crate-type
 cargo crate-type dylib
 
 # x86_64-unknown-linux-musl

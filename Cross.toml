@@ -1,4 +1,4 @@
 [target.x86_64-apple-darwin.dockerfile]
 file = "./cross-toolchains/docker/Dockerfile.x86_64-apple-darwin-cross"
-[target.aarch64-apple-darwin]
+[target.aarch64-apple-darwin.dockerfile]
 file = "./cross-toolchains/docker/Dockerfile.aarch64-apple-darwin-cross"
